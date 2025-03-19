@@ -1,0 +1,32 @@
+.bulk-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .post-section {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .post-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .post-list {
+    padding-left: 20px;
+  }
+  
+  .no-data,
+  .no-selection {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+  }
+  
