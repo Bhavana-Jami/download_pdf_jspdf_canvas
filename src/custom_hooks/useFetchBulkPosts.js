@@ -8,7 +8,7 @@ const useFetchBulkPosts = (selectedPosts) => {
       const allPosts = {};
       for (const post of selectedPosts) {
         try {
-          const postNumber = post.match(/\d+/)[0]; // Extract post number
+          const postNumber = post.match(/\d+/)[0]; 
           const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postNumber}`);
           const data = await response.json();
           allPosts[post] = data;

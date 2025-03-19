@@ -8,9 +8,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-    <PostList/>
-    </>
+    <div className="App">
+      <PostList />
+    </div>
   );
 }
 

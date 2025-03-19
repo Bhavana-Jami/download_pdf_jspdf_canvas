@@ -60,17 +60,18 @@ function PostList() {
 
   return (
     <div className="container">
-      <h2>Select Post Statements</h2>
+      <div className="container-header">
+        <h2>Select Post Statements</h2>
 
-      {/* Bulk Download Button */}
-      <button
-        onClick={downloadBulkPDF}
-        className="bulk-download-btn"
-        disabled={selectedPosts.length === 0}
-      >
-        Download Selected Posts (Bulk)
-      </button>
-
+        {/* Bulk Download Button */}
+        <button
+          onClick={downloadBulkPDF}
+          className="bulk-download-btn"
+          disabled={selectedPosts.length === 0}
+        >
+          Download
+        </button>
+      </div>
       {/* Post List */}
       <ul className="post-list">
         {postNumbers.map((post, index) => (
@@ -95,11 +96,10 @@ function PostList() {
       {popupPost && (
         <div className="popup">
           <div className="popup-content">
-            <h3>{popupPost} Details</h3>
             {loading ? (
               <p>Loading...</p>
             ) : (
-              <div id="pdf-content" style={{ backgroundColor: "red", color: "yellow" }}>
+              <div id="pdf-content">
                 {Object.keys(postData).length !== 0 ?
                   <div>
                     <h2 >{postData.title}</h2>
@@ -112,9 +112,10 @@ function PostList() {
                   : <p>No details found.</p>}
               </div>
             )}
-            <button onClick={downloadPDF} className="download-btn">Download PDF</button>
-            <button onClick={() => setPopupPost(null)} className="close-btn">Close</button>
-          </div>
+            <div className="container-footer">
+              <button onClick={downloadPDF} className="download-btn">Download PDF</button>
+              <button onClick={() => setPopupPost(null)} className="close-btn">Close</button>
+            </div>  </div>
         </div>
       )}
     </div>

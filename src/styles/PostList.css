@@ -1,18 +1,30 @@
 .container {
-  max-width: 500px;
-  margin: 20px auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: black !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .post-list {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
   list-style: none;
   padding: 0;
 }
 
 .post-item {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -27,7 +39,6 @@
 
 .bulk-download-btn {
   display: block;
-  margin: 10px auto;
   padding: 10px;
   font-size: 14px;
   background-color: #28a745;
@@ -41,13 +52,20 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
-
+#pdf-content{
+  padding: 2rem;
+  background-color: aliceblue;
+}
+#pdf-content p{
+  font-size: larger;
+  text-align: left;
+}
 .popup {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -56,14 +74,23 @@
 }
 
 .popup-content {
-  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 70%;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
 }
-
+.container-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 .download-btn,
 .close-btn {
   margin-top: 15px;
